@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,36 +8,34 @@
 body {
     font-family: Helvetica;
     line-height: 1.6;
-    color: #01d5d5;
 }
 
 /***** HEADER/NAVIGATION *****/
 header {
     background-color: #0f0d3f;
-    color: none;
-    padding: 1rem 2rem; /* Adjust padding for better spacing */
-    display: flex; /* Make header a flex container */
-    justify-content: space-between; /* Space out the logo (left) and nav (right) */
-    align-items: center; /* Vertically center the logo and nav */
-    height: 60px; /* Set header height */
+    padding: 1rem 2rem;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    height: 60px; 
     z-index: 2;
 }
 
 .logo {
-    max-width: 140px; /* Adjust logo size */
-    height: auto; /* Maintain aspect ratio of the logo */
+    max-width: 140px; 
+    height: auto;
 }
 
 .nav-links {
     display: flex;
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: flex-end; 
     list-style: none;
-    gap: 1rem;
+    gap: 1rem; 
 }
 
 .nav-links a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; 
     font-weight: bold;
 }
 
@@ -48,43 +45,39 @@ header {
 
 /***** HERO HOME PAGE *****/
 .hero {
-    height: 100vh; /* Take up the full viewport height */
-    background: url(Images/hero.svg); /* Hero background image */
-    background-size: cover; /* Ensure the background covers the whole section */
-    background-position: center; /* Center the background */
-    background-repeat: no-repeat;
-    display: flex; /* Use flexbox to center content */
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    position: relative;
+    height: 100vh; 
+    background: url(Images/hero.svg) center/cover no-repeat; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
 }
 
 .hero-text {
-    text-align: center; /* Center the text */
+    text-align: center; 
     color: white;
     z-index: 1;
-    max-width: 90%; /* Limit the width of the text container */
-    padding: 0 20px; /* Add some padding for smaller screens */
+    max-width: 90%;
 }
 
-/* Title Styling */
+
 .hero-text h1 {
-    font-size: 48px; /* Large font size for the title */
+    font-size: 65px; 
     margin-bottom: 15px;
 }
 
-/* Paragraph Styling */
+
 .hero-text p {
-    font-size: 22px;
+    font-size: 25px;
     margin-bottom: 25px;
 }
 span{
     color: #01d5d5;
 }
 
-/* Button Styling */
+
 .hero-text .btn1 {
-    padding: 20px 40px; /* Button padding */
+    padding: 20px 40px; 
     font-size: 18px;
     background-color: #0f0d3f;
     color: white;
@@ -102,8 +95,7 @@ span{
 /***** SERVICES PAGE *****/
 .servicebody {
     background: url(Images/hero4.svg) center/cover no-repeat;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 50px;
 }
 
 h1 {
@@ -111,51 +103,50 @@ h1 {
     font-size: 40px;
 }
 
-.row {
+.cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
-.box {
-    flex: 1 1 calc(33.333% - 20px); /* 3 cards in a row with 20px gap */
-    min-width: 280px; /* Minimum width for the card */
-    max-width: 350px; /* Max width for the card to ensure consistency */
+.cardbackground {
+    flex: 1 1 30%;
+    min-width: 280px;
+    max-width: 350px; 
     background: white;
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
-    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s ease;
-    margin: 10px; /* Small margin for spacing between cards */
+    margin: 10px; 
 }
 
-.box img {
+.cardbackground img {
     width: 100%;
     height: auto;
     margin-top: 15px;
-    object-fit: cover; /* Ensures the image doesn't stretch and maintains aspect ratio */
+    object-fit: cover; 
 }
 
-.box h3 {
+.cardbackground h3 {
     font-size: 25px;
     color: #0f0d3f;
     margin-top: 20px;
 }
 
-.box p {
-    color: black;
+.cardbackground p {
+    color: #0f0d3f;
     line-height: 1.5;
     margin-top: 20px;
 }
+
 /* service buttons */
-.box .btn {
+.cardbackground .btn {
     width: 100%;
     padding: 15px;
     background-color: #0f0d3f;
@@ -166,79 +157,73 @@ h1 {
     margin-top: 20px;
 }
 
-.box .btn:hover {
+.cardbackground .btn:hover {
     background: white;
     color: #01d5d5;
     border: 2px solid #01d5d5;
 }
 
-/* About Us Section */
+/***** ABOUT US ******/
 .aboutus-body {
-    height: 100vh; /* Set the height of the section to 100% of the viewport */
-    padding: 50px 20px; /* Padding for spacing around content */
-    background: url(Images/hero4.svg) center/cover no-repeat; /* Set the background image */
-    background-size: cover; /* Ensure the image covers the section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating the image */
+    min-height: 100vh; 
+    padding: 50px 20px; 
+    background: url(Images/hero4.svg) center/cover no-repeat;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    flex-direction: column; /* Stack the content vertically */
+    justify-content: center;
 }
 
-/* Flexbox layout for About Us content */
+/* container for pic and text */
 .about {
-    display: flex; /* Align items side by side */
-    justify-content: space-between; /* Space between image and text */
-    align-items: center; /* Vertically align items */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 30px; /* Space between items */
-    width: 100%; /* Take up full width of the container */
-    max-width: 1200px; /* Optional: Limit max width */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+    max-width: 1200px;
     margin: auto; /* Center the content horizontally */
 }
 
-/* Styling for the image */
+
 .manpic {
-    width: 60%; /* Increase the image width to 60% */
-    max-width: 500px; /* Optional: Set a maximum width for the image */
-    height: auto; /* Maintain the aspect ratio of the image */
-    object-fit: cover; /* Ensure the image doesn't stretch */
+    width: 60%; /* taking up % of container */
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
 }
 
-/* Styling for the text */
+
 .about-text {
-    width: 40%; /* Reduce the text section to 40% to balance with the image */
-    color: white; /* Text color */
-    font-size: 18px; /* Set text font size */
-    line-height: 1.6; /* Set line height for readability */
+    width: 40%; /* takes up % of container split with manpic*/
+    color: white;
+    font-size: 20px; 
+    line-height: 1.6; 
 }
 
-/* Heading Styling */
+
 .about-text h1 {
-    font-size: 36px; /* Make the heading large */
-    color: #0f0d3f; /* Set heading color */
+    font-size: 45px; 
+    color: #0f0d3f; 
     margin-bottom: 20px;
 }
 
-/* Paragraph Styling */
+
 .about-text p {
-    margin-bottom: 20px; /* Space below the paragraph */
+    margin-bottom: 20px; 
 }
 
-/* Button Styling */
+
 .aboutbtn {
-    background-color: #0f0d3f; /* Set button color */
+    background-color: #0f0d3f; 
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 12px 20px;
+    padding: 15px 30px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px; /* Space the button below the paragraph */
+    margin-top: 20px;
 }
 
-/* Button hover effect */
+
 .aboutbtn:hover {
     background: white;
     color: #01d5d5;
@@ -246,24 +231,21 @@ h1 {
 }
 
 /***** CONTACT US PAGE *****/
+
 .contactus-body {
-    height: 100vh;
-    padding: 50px 20px; /* Padding for spacing around content */
-    background: url(Images/hero3.svg) center/cover no-repeat; /* Set background image */
-    background-size: cover; /* Ensure background covers the section */
-    background-position: center; /* Center the background */
-    background-repeat: no-repeat; /* Prevent background repetition */
+    min-height: 100vh;
+    padding: 50px 20px;
+    background: url(Images/hero3.svg) center/cover no-repeat; 
 }
 
-/* Flexbox container for both sections */
+/* Flexbox container for text and form*/
 .container {
-    display: flex; /* Display the sections side by side */
-    justify-content: space-between; /* Space between the text and form */
-    align-items: flex-start; /* Align items to the top */
+    display: flex; 
+    justify-content: space-between; 
     gap: 100px; /* Space between text and form */
     max-width: 1200px;
-    margin: auto; /* Center the container */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: auto; 
+    flex-wrap: wrap; 
 }
 
 /* Left side - contact information */
@@ -283,49 +265,36 @@ h1 {
 .contactinfo p {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* Right side - Contact form */
+/* Right side - contact form */
 .contact {
-    flex: 1; /* Take up equal space */
-    color: #333; /* Text color */
-    margin-top: 50px;
+    flex: 1;
     background-color: white;
     padding: 2rem;
     border-radius: 10px;
+    margin: auto; 
 }
 
 .contact h1 {
-    font-size: 36px; /* Larger font size for the header */
+    font-size: 36px; 
     color: #0f0d3f;
     margin-bottom: 20px;
-}
-
-/* Styling for the form box */
-.contact-form-box {
-    background-color: white; /* White background for the box */
-    padding: 30px; /* Padding inside the box */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    width: 100%;
-    max-width: 600px; /* Optional: set a max width for the box */
-    margin: auto; /* Center the box */
-    border: 1px solid #ddd; /* Light border around the box */
 }
 
 /* Form styling */
 form {
     display: flex;
-    flex-direction: column; /* Stack the form elements vertically */
-    gap: 20px; /* Space between each form element */
+    flex-direction: column;
+    gap: 20px; 
 }
 
 form label {
     text-align: left;
     font-size: 16px;
     margin-bottom: 5px;
-    color: #333; /* Dark text color */
+    color: #333;
 }
 
 form input, form textarea {
@@ -334,16 +303,15 @@ form input, form textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
-    background-color: #f9f9f9; /* Light background color for inputs */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    background-color: #f9f9f9;
 }
 
 form input:focus, form textarea:focus {
-    border-color: #01d5d5; /* Highlight border when focused */
-    outline: none; /* Remove outline */
+    border-color: #01d5d5; 
+    outline: none; /* Removes default outline in different color */
 }
 
-/* Styling for the submit button */
+/* send button */
 form button {
     padding: 12px 20px;
     background-color: #0f0d3f;
@@ -352,7 +320,6 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
 }
 
 form button:hover {
@@ -362,49 +329,39 @@ form button:hover {
 }
 
 /***** NEWS SECTION STYLES *****/
-
-/* Container for the entire news section */
 .news-body {
-    position: relative; /* This will allow absolute positioning for the .news-selection */
-    padding: 50px 20px; /* Padding around the section */
-    height: 100vh; /* Full viewport height */
-    background: url(Images/hero3.svg) center/cover no-repeat; /* Background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative; /* Allows absolute positioning*/ 
+    height: 100vh;
+    background: url(Images/hero3.svg) center/cover no-repeat; 
 }
 
-/* Section to select country (this will be moved to the top) */
+/* News selection box */
 .news-selection {
-    position: absolute; /* Position it absolutely within the .news-body container */
-    top: 20%; /* Align it to the top */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Correct centering since left is set to 50% */
+    position: absolute;
+    top: 20%; 
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
     padding: 30px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form */
-    max-width: 600px;
-    width: 100%; /* Ensure it takes up a full width but is constrained by max-width */
-    background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
-    text-align: center; /* Center the text inside the form */
-    z-index: 1; /* Ensure it appears in front of the hero background */
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%; /* Constrained by max-width */
+    background-color: white; 
+    text-align: center;
+    z-index: 1;
 }
 
 .news-selection h2 {
-    font-size: 28px; /* Larger font for heading */
-    color: #0f0d3f; /* Dark text color */
+    font-size: 30px;
+    color: #0f0d3f; 
     margin-bottom: 20px;
 }
 
-/* Form styling within news selection */
+/* form button*/
 #news-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center; /* Center the form elements horizontally */
 }
 
-/* Button style for 'Show me the News' */
 .news-selection button {
     padding: 12px 20px;
     background-color: #0f0d3f;
@@ -413,9 +370,9 @@ form button:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-align: center
 }
 
-/* Hover effect for the button */
 .news-selection button:hover {
     background: white;
     color: #01d5d5;
@@ -428,5 +385,16 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: auto; /* Making sure the footer sticks to the bottom of the page (if there's not enough content above). */
+    margin-top: auto; 
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .feature{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1025px) {
+    .feature{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
