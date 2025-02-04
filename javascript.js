@@ -7,13 +7,13 @@ form.addEventListener('submit', async (event) => {
     console.log('Form submitted!');  
 
     const searchTerm = 'software';  
-    const apiUrl = `https://api.nasa.gov/techtransfer/patent/?patent=${searchTerm}&api_key=${API_KEY}`;
+    const apiUrl = `https://api.nasa.gov/techtransfer/patent/?patent/?engine&api_key=${API_KEY}`;
 
     try {
         const response = await fetch(apiUrl);  
         const data = await response.json();  
 
-        // console.log(data); 
+        console.log(data); 
 
         if (data && data.results && data.results.length > 0) {
             displayNews(data.results);
@@ -26,14 +26,23 @@ form.addEventListener('submit', async (event) => {
     }
 });
 
-// Function to display the fetched news data
 function displayNews(results) {
-    newsContainer.innerHTML = results.map(result => `
-        <div class="news-card">
-            <h3>${result.title || 'No title available'}</h3>
-            <p>${result.description || 'No description available'}</p>
-            <p><strong>Patent Number:</strong> ${result.patent_number || 'N/A'}</p>
-            <a href="${result.url || '#'}" target="_blank">Read More</a>
-        </div>
-    `).join('');
+    newsContainer.innerHTML = results.map(result => {
+
+        const title = result[2] || 'No title available';
+        const description = result[3] || 'No description available';
+        const patentNumber = result[1] || 'N/A';
+        const imageUrl = result[11] || '';  
+        const url = result[10] || '#'; 
+
+        return `
+            <div class="news-card">
+                <h3>${title}</h3>
+                <p>${description}</p>
+                <p><strong>Patent Number:</strong> ${patentNumber}</p>
+                <a href="${url}" target="_blank">Read More</a>
+                ${imageUrl ? `<img src="${imageUrl}" alt="${title}" />` : ''}
+            </div>
+        `;
+    }).join('');
 }
